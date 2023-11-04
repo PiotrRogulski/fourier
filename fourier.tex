@@ -1,17 +1,16 @@
-% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
 % !TeX encoding = UTF-8
 % !TeX spellcheck = pl_PL
 
 \PassOptionsToPackage{breaklinks}{hyperref}
 \PassOptionsToPackage{svgnames}{xcolor}
 
-\documentclass[polish, 12pt]{beamer}
+\documentclass[polish, 12pt, aspectratio=169]{beamer}
 
 \usepackage[nosingleletter, lastparline]{impnattypo}
 \usepackage[polish]{babel}
 \usepackage{minted}
 \usepackage{csquotes}
-\usepackage[backref]{biblatex}
+\usepackage[backref, backend=bibtex]{biblatex}
 \usepackage{bookmark}
 \usepackage{hyperref}
 \usepackage[babel, tracking]{microtype}
@@ -44,8 +43,46 @@
 \author{Piotr Rogulski}
 \date{\today}
 
+\addbibresource{fourier.bib}
+
 \begin{document}
 
-\maketitle
+\frame{\titlepage}
+
+\begin{frame}{Agenda}
+    \setbeamertemplate{section in toc}[sections numbered]
+    \tableofcontents
+\end{frame}
+
+\section{Transformacja Fouriera}
+
+\begin{frame}{Foo}
+foo
+\end{frame}
+
+\section[DFT \\ {\normalsize Discrete Fourier Transform}]{DFT}
+
+\begin{frame}{Bar}
+bar
+\end{frame}
+
+\section[FFT \\ {\normalsize Fast Fourier Transform}]{FFT}
+
+\begin{frame}{Baz}
+baz
+\end{frame}
+
+\section{Zastosowania}
+
+\begin{frame}{Qux}
+qux
+\end{frame}
+
+\section*{Bibliografia}
+
+\begin{frame}[allowframebreaks]{Bibliografia}
+    \nocite{*}
+    \printbibliography[heading=none]
+\end{frame}
 
 \end{document}

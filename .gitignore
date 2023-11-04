@@ -1,7 +1,10 @@
 # LaTeX intermediate files
 _minted*
 *.aux
+*.bbl
+*.blg
 *.bcf
+*-blx.bib
 *.log
 *.nav
 *.run.xml
