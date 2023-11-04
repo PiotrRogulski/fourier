@@ -1,0 +1,11 @@
+# LaTeX intermediate files
+_minted*
+*.aux
+*.bcf
+*.log
+*.nav
+*.run.xml
+*.snm
+*.synctex.gz
+*.synctex\(busy\)
+*.toc
