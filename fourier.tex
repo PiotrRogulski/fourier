@@ -28,6 +28,8 @@
 \usepackage{tikz}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{xfrac,unicode-math}
+\usepackage{bm}
 
 \usetheme[progressbar=frametitle]{metropolis}
 \setmonofont{JetBrainsMono}[
@@ -39,7 +41,7 @@
     BoldItalicFont=*-BoldItalic
 ]
 
-\title{Transformata Fouriera}
+\title{Transformacja Fouriera}
 \author{Piotr Rogulski}
 \date{\today}
 
@@ -56,14 +58,40 @@
 
 \section{Transformacja Fouriera}
 
-\begin{frame}{Foo}
-foo
+\begin{frame}
+
+\end{frame}
+
+\begin{frame}{Transformacja Fouriera}
+    \Huge
+    \begin{equation*}
+        \mathcal{F}(f)(\xi) = \int_{-\infty}^{\infty} f(x) e^{-2\pi i x \xi} dx
+    \end{equation*}
+    \pause{}
+    \small
+    W postaci n-wymiarowej:
+    \normalsize
+    \vspace{-1em}
+    \begin{equation*}
+        \mathcal{F}(f)(\symbf{\xi}) = \int_{\mathbb{R}^n} f(\symbf{x}) e^{-2\pi i (\symbf{x \cdot \xi})} d\symbf{x}
+    \end{equation*}
 \end{frame}
 
 \section[DFT \\ {\normalsize Discrete Fourier Transform}]{DFT}
 
-\begin{frame}{Bar}
-bar
+\begin{frame}{Dyskretna transformacja Fouriera}
+    \Huge
+    \begin{equation*}
+        X_k = \sum_{n=0}^{N-1} x_n e^{-2\pi i \frac{kn}{N}}
+    \end{equation*}
+    \pause{}
+    \small
+    W postaci n-wymiarowej:
+    \normalsize
+    \vspace{-1em}
+    \begin{equation*}
+        X_{\symbf{k}} = \sum_{\symbf{n} = \symbf{0}}^{\symbf{N} - \symbf{1}} x_{\symbf{n}} e^{-2\pi i \frac{\symbf{k \cdot n}}{\symbf{N}}}
+    \end{equation*}
 \end{frame}
 
 \section[FFT \\ {\normalsize Fast Fourier Transform}]{FFT}
