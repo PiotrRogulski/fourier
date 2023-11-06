@@ -12,3 +12,5 @@ _minted*
 *.synctex.gz
 *.synctex\(busy\)
 *.toc
+
+**/*-converted-to.pdf
