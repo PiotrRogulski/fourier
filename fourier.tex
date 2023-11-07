@@ -30,6 +30,7 @@
 \usepackage{amssymb}
 \usepackage{xfrac,unicode-math}
 \usepackage{bm}
+\usepackage{physics}
 
 \usetheme[progressbar=frametitle]{metropolis}
 \setmonofont{JetBrainsMono}[
@@ -234,6 +235,19 @@
             \caption*{Interferogram}
         \end{figure}
     \end{columns}
+\end{frame}
+
+\begin{frame}{Analiza równań różniczkowych}
+    \pause
+    \begin{itemize}[<+->]
+        \item Transformacja Fouriera pozwala uprościć rozwiązywanie równań różniczkowych
+        \item Przykład: oscylator harmoniczny: \( \dv[2]{x}{t} + 2\gamma \dv{x}{t} + \omega_0^2 x(t) = \frac{f(t)}{m} \)
+        \item Po transformacji obu stron: \( -\omega^2 X(\omega) - 2i\gamma\omega X(\omega) + \omega_0^2 X(\omega) = \frac{F(\omega)}{m} \) \\
+              gdzie \( X(\omega) = \mathcal{F}(x(t)) \) i \( F(\omega) = \mathcal{F}(f(t)) \)
+        \item Jest to równanie algebraiczne: \( X(\omega) = \frac{F(\omega)}{m(\omega_0^2 - \omega^2 - 2i\gamma\omega)} \)
+        \item Aby otrzymać rozwiązanie w dziedzinie czasu, należy obliczyć odwrotną transformatę Fouriera
+        \item \( x(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} X(\omega) e^{i\omega t} d\omega \)
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Discrete cosine transform}
