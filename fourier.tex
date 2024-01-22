@@ -109,7 +109,7 @@
         \item<3-> przesunięcie: \( \mathcal{F}(f(x - a)) = e^{-2\pi i a \xi} \mathcal{F}f(\xi) \)
         \item<3-> modulacja: \( \mathcal{F}(e^{2\pi i a x} f(x)) = \mathcal{F}f(\xi - a) \)
         \item<4-> symetria: \( \mathcal{F}(\mathcal{F}f)(x) = f(-x) \)
-        \item<5-> konwolucja: \( \mathcal{F}(f * g) = \mathcal{F}f \cdot \mathcal{F}g \)
+        \item<5-> splot: \( \mathcal{F}(f * g) = \mathcal{F}f \cdot \mathcal{F}g \)
         \item<6-> pochodna: \( \mathcal{F}(f') = 2\pi i \xi \mathcal{F}f \)
     \end{itemize}
 \end{frame}
@@ -136,7 +136,7 @@
     \begin{itemize}[<+->]
         \item \( X_k = \sum_{n=0}^{N-1} x_n e^{-2\pi i \frac{kn}{N}} \Longleftrightarrow X = Wx\), gdzie \( W_{kn} = e^{-2\pi i kn / N} \)
         \item Elementy \(W\) są postaci \( w_{kn} = \omega^{kn} \), gdzie \( \omega = e^{-2\pi i / N} \)
-        \item \(W = \frac{1}{N} \begin{bmatrix}
+        \item \(W = \begin{bmatrix}
             1 & 1 & 1 & \cdots & 1 \\
             1 & \omega & \omega^2 & \cdots & \omega^{N-1} \\
             1 & \omega^2 & \omega^4 & \cdots & \omega^{2(N-1)} \\
@@ -152,8 +152,8 @@
 \begin{frame}{Dlaczego FFT?}
     \begin{itemize}
         \item potrzeba szybkiego obliczania DFT
-        \item złożoność obliczeniowa DFT\@: \( O(N^2) \)
-        \item<2|alert@2> złożoność obliczeniowa FFT\@: \( O(N \log N) \)
+        \item złożoność obliczeniowa DFT\@: \( \mathcal{O}(N^2) \)
+        \item<2|alert@2> złożoność obliczeniowa FFT\@: \( \mathcal{O}(N \log N) \)
     \end{itemize}
 \end{frame}
 
@@ -164,7 +164,7 @@
             \setlength\itemsep{1em}
             \item dziel i zwyciężaj
             \item oblicza DFT rozmiaru \( N = N_1 N_2 \) za pomocą DFT rozmiaru \( N_1 \) i \( N_2 \)
-            \item osiąga złożoność \( O(N \log N) \) dla liczb \enquote{gładkich}
+            \item osiąga złożoność \( \mathcal{O}(N \log N) \) dla liczb \enquote{gładkich}
         \end{itemize}
     \pause{}
     \column{0.5\linewidth}
